@@ -16,3 +16,15 @@ To compile the executable run the following:
 Please follow the inforgraphic below:
 
 ![compile](compile.gif)
+
+## Recompilation
+To recomplie the project after making some changes
+
+   make re
+
+You can also delete file with:
+   
+   make clean
+   make fclean
+
+![recompile](recompile.gif)
