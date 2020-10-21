@@ -24,7 +24,7 @@ static void		resolve(t_list *path, t_bool is_dirs, t_flag opt)
 	{
 		if ((dir = opendir(lst[2]->content)) == NULL)
 			errno != ENOTDIR ? nerror("ft_ls: ", lst[2]->content, 0) : \
-				ft_lstpshbck(&lst[0], lst[2]->content, lst[2]->content_size);
+				 ft_lstpshbck(&lst[0], lst[2]->content, lst[2]->content_size);
 		else
 		{
 			ft_lstpshbck(&lst[1], lst[2]->content, lst[2]->content_size);
@@ -48,7 +48,14 @@ int				main(int ac, char **av)
 	opt = (t_flag){false, false, false, false, false, false, false, false};
 	path = NULL;
 	if (ac > 1)
+	{
+		if (strcmp(av[1],"help") == 0 )
+		{
+			ft_putendl("Only Raltrugf1 flags can be processed\nPlease try again with the right flags\n");
+			return (0);
+		}
 		get_opt(ac - 1, av, &path, &opt);
+	}
 	if (path == NULL)
 		path = ft_lstnew(".", ft_strlen("."));
 	resolve(path, path->next != NULL ? true : false, opt);

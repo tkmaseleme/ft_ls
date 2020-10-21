@@ -28,3 +28,20 @@ You can also delete file with:
    make fclean
 
 ![recompile](recompile.gif)
+
+## Running
+
+Once you have compiled the executable with:
+
+   make
+
+You can run the program with the following:
+
+    ./ft_ls
+
+This will give you the basic output of the unix command ls.
+
+    man ls
+
+To find out all the flags and what they do. See above for list of flags that run with this ft ls.
+
