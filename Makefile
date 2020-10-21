@@ -24,10 +24,13 @@ $(NAME):
 		@echo "${MAGENTA}Creating $(NAME) Libft Files${NC}"
 		@make -C lib/
 		@echo $(LOAD1)
+		@sleep 0.1
 		@echo "\n"
 		@gcc $(E_FLAGS) $(SRC) -o $(NAME) $(LIBFT)libft.a
+		@sleep 0.1
 		@echo $(LOAD2)
 		@echo "\n"
+		@sleep 0.1
 		@echo $(LOAD3)
 		@echo "\n"
 
@@ -37,15 +40,18 @@ clean:
 	@make -C lib/ clean
 	@rm -rf $(OBJ)
 	@echo "${MAGENTA}Removing ft_ls Objects...${NC}"
+	@sleep 0.1
 	@echo $(LOAD2)
 	@echo "\n"
 	@echo "${MAGENTA}Almost done!${NC}"
+	@sleep 0.1
 	@echo $(LOAD3)
 	@echo "\n"
 
 fclean:
 	@make -C lib/ fclean
 	@echo "${MAGENTA}Removing ft_ls ${NC}"
+	@sleep 0.1
 	@echo $(LOAD2)
 	@echo "\n"
 	@rm -rf $(NAME) $(OBJ)
