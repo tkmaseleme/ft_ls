@@ -44,4 +44,7 @@ This will give you the basic output of the unix command ls.
     man ls
 
 To find out all the flags and what they do. See above for list of flags that run with this ft ls.
+Alternatively you may run:
+
+    ./ft_ls help
 
